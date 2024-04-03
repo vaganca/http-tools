@@ -1,0 +1,30 @@
+{
+    "name": "vaganca/http-tools",
+    "description": "Set of http tools to manage requests.",
+    "keywords": [],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://vaganca.de/",
+    "autoload": {
+        "psr-4": {
+            "Vaganca\\Component\\HttpTools\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Vaganca Frameworks",
+            "email": "165766066+vaganca@users.noreply.github.com"
+        },
+        {
+            "name": "Vaganca Community",
+            "homepage": "https://vaganca.de/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "PHP" : ">=8.1"
+    }
+}
