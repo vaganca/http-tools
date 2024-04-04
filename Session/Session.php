@@ -47,7 +47,6 @@ class Session implements \IteratorAggregate, \Countable
     public function set(string $name, mixed $value): void
     {
         $this->getAttributeContainer()->set($name, $value);
-        //$this->storage->regenerate();
     }
 
     public function all(): array
