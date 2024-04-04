@@ -24,5 +24,4 @@ class Request
 
     public string $header;
 
-
 }
