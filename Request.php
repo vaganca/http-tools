@@ -12,16 +12,34 @@ namespace Vaganca\Component\HttpTools;
 class Request
 {
 
-    public string $request;
+    public InputContainer $request;
 
-    public string $query;
+    public InputContainer $query;
 
-    public string $server;
+    public ServerContainer $server;
 
-    public string $files;
+    public InputContainer $cookies;
 
-    public string $cookies;
+    public HeaderContainer $headers;
 
-    public string $header;
+    private ParameterContainer $attributes;
+
+    private mixed $content;
+
+    public function __construct(array $query = [], array $request = [], array $attributes = [], array $cookies = [], array $server = [], $content = null)
+    {
+        $this->initialize($query, $request, $attributes, $cookies, $server, $content);
+    }
+
+    public function initialize(array $query = [], array $request = [], array $attributes = [], array $cookies = [], array $server = [], $content = null): void
+    {
+        $this->request = new InputContainer($request);
+        $this->query = new InputContainer($query);
+        $this->attributes = new ParameterContainer($attributes);
+        $this->cookies = new InputContainer($cookies);
+        $this->server = new ServerContainer($server);
+        $this->headers = new HeaderContainer($this->server->getHeaders());
+        $this->content = $content;
+    }
 
 }

@@ -25,6 +25,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "PHP" : ">=8.1"
+        "PHP" : ">=8.1",
+      "ext-http": "*"
     }
 }
