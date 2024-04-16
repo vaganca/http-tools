@@ -24,4 +24,6 @@ interface AttributContainerInterface extends SessionContainerInterface
 
     public function remove(string $name): mixed;
 
+    public function add(string $name, mixed $value);
+
 }

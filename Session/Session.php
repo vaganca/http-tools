@@ -49,6 +49,11 @@ class Session implements \IteratorAggregate, \Countable
         $this->getAttributeContainer()->set($name, $value);
     }
 
+    public function add(string $name, mixed $value): void
+    {
+        $this->getAttributeContainer()->add($name, $value);
+    }
+
     public function all(): array
     {
         return $this->getAttributeContainer()->all();

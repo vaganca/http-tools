@@ -58,6 +58,14 @@ class AttributContainer implements AttributContainerInterface, \IteratorAggregat
         $this->attributes[$name] = $value;
     }
 
+    public function add(string $name, mixed $value)
+    {
+        if(\array_key_exists($name, $this->attributes)) {
+            $this->attributes[$name][] = $value;
+        }
+    }
+
+
     public function all(): array
     {
         return $this->attributes;

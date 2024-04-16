@@ -22,4 +22,4 @@ try {
 
 echo "User heißt: " .$session->get('user') . PHP_EOL;
 
-$session->set('user','Ben');
+$session->set('user',['Ben']);
